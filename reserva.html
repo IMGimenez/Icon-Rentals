@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="reserva.css" />
+    <link rel="Shortcut Icon" href="public/logoAuto.png" />
+    <title>Reserva</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="navbar_logo">
+          <img
+            src="public/logoAuto.png"
+            alt="Logo Icon Rentals"
+            title="Icon Rentals"
+          />
+          <span>Icon Rentals</span>
+        </div>
+        <ul class="navbar_menu">
+          <li><a href="index.html#servicios">Servicios</a></li>
+          <li><a href="index.html#vehiculos">Vehiculos</a></li>
+          <li><a href="index.html#nosotros">Nosotros</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="formulario-page">
+      <h1>Reservar un Vehículo</h1>
+
+      <form action="#" method="post" class="form-reserva">
+        <fieldset>
+          <legend>Información Personal</legend>
+
+          <div class="campo">
+            <label for="nombre">Nombre y Apellido</label>
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              placeholder="Ej: Fernando Gómez"
+              autocomplete="name"
+              required
+            />
+          </div>
+
+          <div class="campo">
+            <label for="email">Correo electrónico</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="ejemplo@email.com"
+              required
+            />
+          </div>
+
+          <div class="dos-col">
+            <div class="campo">
+              <label for="telefono">Teléfono</label>
+              <input
+                type="tel"
+                id="telefono"
+                name="telefono"
+                placeholder="+54 11..."
+                maxlength="15"
+                required
+              />
+            </div>
+            <div class="campo">
+              <label for="dni">DNI / Pasaporte</label>
+              <input
+                type="text"
+                id="dni"
+                name="dni"
+                placeholder="12345678"
+                maxlength="8"
+                required
+              />
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Datos de la Reserva</legend>
+
+          <div class="campo">
+            <label for="tipo">Tipo de vehículo</label>
+            <select id="tipo" name="tipo" required>
+              <option value="">-- Selecciona --</option>
+              <option>Auto</option>
+              <option>Moto</option>
+              <option>Utilitario</option>
+              <option>Aereo</option>
+            </select>
+          </div>
+
+          <div class="campo">
+            <label for="modelo">Modelo seleccionado</label>
+            <input
+              type="text"
+              id="modelo"
+              name="modelo"
+              placeholder="Ej: Chevrolet Camaro"
+              required
+            />
+          </div>
+
+          <div class="dos-col">
+            <div class="campo">
+              <label for="retiro">Fecha de retiro</label>
+              <input type="date" id="retiro" name="retiro" required />
+            </div>
+            <div class="campo">
+              <label for="devolucion">Fecha de devolución</label>
+              <input type="date" id="devolucion" name="devolucion" required />
+            </div>
+          </div>
+
+          <div class="campo">
+            <label>Método de pago</label>
+            <div class="radio-grupo">
+              <label
+                ><input type="radio" name="pago" value="credito" required />
+                Tarjeta de crédito</label
+              >
+              <label
+                ><input type="radio" name="pago" value="debito" /> Tarjeta de
+                débito</label
+              >
+              <label
+                ><input type="radio" name="pago" value="efectivo" />
+                Efectivo</label
+              >
+            </div>
+          </div>
+
+          <div class="dos-col">
+            <div class="campo">
+              <label for="hora">Hora de retiro</label>
+              <input type="time" id="hora" name="hora" required />
+            </div>
+            <div class="campo">
+              <label for="sucursal">Sucursal de retiro</label>
+              <select id="sucursal" name="sucursal" required>
+                <option value="">-- Seleccioná --</option>
+                <option>Villa Constitución</option>
+                <option>Rosario</option>
+                <option>San Nicolás</option>
+              </select>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Opciones Adicionales</legend>
+          <div class="checkbox-grupo">
+            <label><input type="checkbox" name="gps" /> GPS incluido</label>
+            <label
+              ><input type="checkbox" name="silla" /> Silla para niños</label
+            >
+            <label
+              ><input type="checkbox" name="seguro" /> Seguro adicional</label
+            >
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Comentarios</legend>
+          <div class="campo">
+            <label for="comentarios">Observaciones</label>
+            <textarea
+              id="comentarios"
+              name="comentarios"
+              rows="5"
+              placeholder="Cualquier información adicional..."
+            >
+            </textarea>
+          </div>
+        </fieldset>
+
+        <div class="form-botones">
+          <button type="submit" class="btn">Confirmar Reserva</button>
+          <button type="reset" class="btn">Limpiar formulario</button>
+        </div>
+      </form>
+    </main>
+
+    <footer class="footer">
+      <div class="footer_grid">
+        <div class="footer_col">
+          <h4>Contacto</h4>
+          <address>
+            <p>📍 Moreno 2341, Villa Constitución</p>
+            <p>📞 +54 11 1234-5678</p>
+            <p>✉️ iconrentals@gmail.com</p>
+          </address>
+        </div>
+
+        <div class="footer_col">
+          <h4>Horarios</h4>
+          <p>Lun – Vie: 7:00 a 20:00</p>
+          <p>Sáb – Dom: 8:00 a 20:00</p>
+        </div>
+
+        <div class="footer_col">
+          <h4>Redes Sociales</h4>
+          <div class="footer_redes">
+            <a href="https://www.instagram.com" aria-label="Instagram"
+              >📸 Instagram</a
+            >
+            <a href="https://www.facebook.com" aria-label="Facebook"
+              >👤 Facebook</a
+            >
+          </div>
+        </div>
+      </div>
+      <p class="footer_copy">
+        © 2026 Icon Rentals. Todos los derechos reservados.
+      </p>
+    </footer>
+  </body>
+</html>
